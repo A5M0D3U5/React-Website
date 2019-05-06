@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 function HeaderComponent (props) {
     return (
@@ -11,7 +11,7 @@ function HeaderComponent (props) {
             </p>
             {props.loginComponent}
         </header>
-    )
+    );
 }
 
-export default HeaderComponent
+export default HeaderComponent;

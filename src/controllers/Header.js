@@ -1,7 +1,7 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 
-import HeaderComponent from "../components/HeaderComponent"
-import LoginComponent from "../components/LoginComponent"
+import HeaderComponent from "../components/HeaderComponent";
+import LoginComponent from "../components/LoginComponent";
 
 class Header extends Component {
     constructor (props) {
@@ -12,16 +12,16 @@ class Header extends Component {
             siteDesc: "Welcome to my site. Here I will be designing stuff with react, and hopefully I can get some cool things going!",
 
             isLoggedIn: false,
-            username: "Bob",
+            username: "",
+            passwd: ""
         };
-        this.handleLogin = this.handleLogin.bind(this);
     }
 
-    handleLogin (event) {
+    handleLogin = (event) => {
         //const {name} = event.target;
         this.setState({
             isLoggedIn: true,
-        })
+        });
     };
 
     render () {
@@ -32,8 +32,8 @@ class Header extends Component {
                 desc={this.state.siteDesc}
                 loginComponent={<LoginComponent name={this.state.username} handleLogin={this.handleLogin} isLoggedIn={this.state.isLoggedIn}/>}
             />
-        )
+        );
     }
 }
 
-export default Header
+export default Header;
